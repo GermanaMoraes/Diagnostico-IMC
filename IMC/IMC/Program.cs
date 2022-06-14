@@ -6,7 +6,13 @@ namespace IMC
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string nome;
+        
+
+            Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
+            Console.WriteLine("Digite seu nome");
+            Console.Convert.ToString(ReadLine(nome));
+            
         }
     }
 }
