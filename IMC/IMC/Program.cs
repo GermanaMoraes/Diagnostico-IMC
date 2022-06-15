@@ -24,10 +24,12 @@ namespace IMC
             //Imprimindo o Cabeçalho
             Console.WriteLine("Diagnóstico Prévio");
             Console.WriteLine($"Nome:{nome}");
-            Console.WriteLine("Sexo:");
+
+            //Imprimindo o sexo(olhar como fazer)
+            
             Console.WriteLine($"Idade: {idade}");
-            Console.WriteLine("Altura:");
-            Console.WriteLine("Peso");
+            Console.WriteLine($"Altura:{altura}"); //olhar pq está imprimindo inteiro
+            Console.WriteLine($"Peso: {peso}");
             
             //Calculando a categoria
             if (idade < 12)
@@ -39,8 +41,16 @@ namespace IMC
             else
             { Console.WriteLine("Categoria: Idoso");    }
 
-            //Calculando o IMC
+            //Resultado desejável
+            Console.WriteLine("IMC Desejável: entre 20 e 24");
 
+            //Calculando o IMC
+            double imc = (peso) / (altura * altura);
+            Console.WriteLine($"Resultado do IMC: {imc}");
+
+            //riscos
+
+            //recomendações
                           
         }
         
