@@ -36,16 +36,16 @@ namespace IMC
             
             //Calculando a categoria
             if (idade < 12)
-            { Console.WriteLine("Categoria: Infantil"); }
+            { Console.WriteLine("Categoria: Infantil."); }
             if (idade >= 12 && idade <= 20)
-            { Console.WriteLine("Categoria: Juvenil");  }
+            { Console.WriteLine("Categoria: Juvenil.");  }
             if(idade >= 21 && idade <= 65 )
-            { Console.WriteLine("Categoria: Adulto");   }
+            { Console.WriteLine("Categoria: Adulto.");   }
             else
-            { Console.WriteLine("Categoria: Idoso");    }
+            { Console.WriteLine("Categoria: Idoso.");    }
 
             //Resultado desejável
-            Console.WriteLine("IMC Desejável: entre 20 e 24");
+            Console.WriteLine("IMC Desejável: entre 20 e 24.");
 
             //Calculando o IMC
             double imc = (peso) / (altura * altura);
@@ -55,15 +55,15 @@ namespace IMC
             if(imc<20)
             {
                 Console.WriteLine("Riscos: Muitas complicações de saúde como doenças pulmonares" +
-                " e cardiovasculares podem estar associadas ao baixo peso");
+                " e cardiovasculares podem estar associadas ao baixo peso.");
             }
-            if(imc>=20 && imc<=24)
-            { Console.WriteLine("Riscos: Seu peso está ideal para suas referências"); }
-            if(imc>=25 && imc<=29)
-            { Console.WriteLine("Riscos: Aumento de peso apresenta risco moderado para outras doença crônicas e cardiovasculares"); }
+            if(imc>=20 && imc<25)
+            { Console.WriteLine("Riscos: Seu peso está ideal para suas referências."); }
+            if(imc>=25 && imc<30)
+            { Console.WriteLine("Riscos: Aumento de peso apresenta risco moderado para outras doença crônicas e cardiovasculares."); }
             if (imc>=30 && imc<=35)
             { Console.WriteLine("Riscos: Quem tem obesidade vai estar mais exposto a doenças graves e ao risco de mortalidade"); }
-            if(imc>=36)
+            if(imc>35)
             { Console.WriteLine("Riscos: O obeso mórbito vive menos, tem alto risco de mortalidade geral por diversas causas"); }
 
 
@@ -74,12 +74,12 @@ namespace IMC
                 Console.WriteLine("Recomendação inicial: Inclua carboidratos simples em sua dieta, além de proteínas " +
                     "indispensáveis para ganho de massa magra. Procure um profissional.");
             }
-            if (imc >= 20 && imc <= 24)
+            if (imc >= 20 && imc < 25)
             { Console.WriteLine("Recomendação inicial: Mantenha uma dieta saudável e faça seus exames periódicos."); }
-            if (imc >= 25 && imc <= 29)
+            if (imc >= 25 && imc < 30)
             { Console.WriteLine("Recomendação inicial:Adote um tratamento baseado em dieta balanceada, exercício fisíco e medicação." +
                 "A ajuda de um profissional pode ser interessante."); }
-            if (imc >= 30 && imc <= 35)
+            if (imc >= 30 && imc <36)
             { Console.WriteLine("Recomendação inicial: Adote uma dieta alimentar rigorosa, com acompanhamento" +
                 "de um nutricionista e um médico especialista(encocríno)"); }
             if(imc>=36)
