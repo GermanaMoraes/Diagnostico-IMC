@@ -14,7 +14,26 @@ namespace IMC
             string nome = Console.ReadLine();
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
-            
+
+
+            //Imprimindo o Cabeçalho
+            Console.WriteLine("Diagnóstico Prévio");
+            Console.Write();
+
+            //Calculando a categoria
+            if (idade < 12)
+            { Console.WriteLine("Categoria: Infantil"); }
+            if (idade >= 12 && idade <= 20)
+            { Console.WriteLine("Categoria: Juvenil");  }
+            if(idade >= 21 && idade <= 65 )
+            { Console.WriteLine("Categoria: Adulto");   }
+            else
+            { Console.WriteLine("Categoria: Idoso");    }
+
+
+                          
         }
+        
+        
     }
 }
