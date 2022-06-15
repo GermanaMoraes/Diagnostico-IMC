@@ -28,7 +28,7 @@ namespace IMC
             //Imprimindo o sexo(olhar como fazer)
             
             Console.WriteLine($"Idade: {idade}");
-            Console.WriteLine($"Altura:{altura}"); //olhar pq está imprimindo inteiro
+            Console.WriteLine($"Altura:{altura}"); 
             Console.WriteLine($"Peso: {peso}");
             
             //Calculando a categoria
@@ -49,6 +49,11 @@ namespace IMC
             Console.WriteLine($"Resultado do IMC: {imc}");
 
             //riscos
+            if(imc<20)
+            {
+                Console.WriteLine("Muitas complicações de saúde como doenças pulmonares" +
+                " e cardiovasculares podem estar associadas ao baixo peso");
+            }
 
             //recomendações
                           
