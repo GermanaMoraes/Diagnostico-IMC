@@ -7,8 +7,11 @@ namespace IMC
         static void Main(string[] args)
         {                    
             //Pedir os dados do problema
+
             Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
             Console.WriteLine("Digite seu nome");
+            //validação do nome
+
             string nome = Console.ReadLine();
             //buscar uma melhor maneira para armazenar feminino ou Masculino
             Console.WriteLine("Digite 1 para Feminino ou 2 para Masculino");
@@ -16,10 +19,17 @@ namespace IMC
 
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
+            //validação de idade
+            
             Console.WriteLine("Digite sua altura em metros");
             double altura = double.Parse(Console.ReadLine());
+            //validação da altura, ver virg ou ponto
+
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
+            //validação do peso, ponto ou virg
+
+            //colocar um limpa telas
 
             //Imprimindo o Cabeçalho
             Console.WriteLine("Diagnóstico Prévio");
