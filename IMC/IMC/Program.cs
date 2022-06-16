@@ -5,14 +5,15 @@ namespace IMC
     internal class Program
     {
         static void Main(string[] args)
-        {
-                    
-
+        {                    
+            //Pedir os dados do problema
             Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
+            //buscar uma melhor maneira para armazenar feminino ou Masculino
             Console.WriteLine("Digite 1 para Feminino ou 2 para Masculino");
             int sexo= int.Parse(Console.ReadLine());
+
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite sua altura em metros");
@@ -62,9 +63,9 @@ namespace IMC
             if(imc>=25 && imc<30)
             { Console.WriteLine("Riscos: Aumento de peso apresenta risco moderado para outras doença crônicas e cardiovasculares."); }
             if (imc>=30 && imc<=35)
-            { Console.WriteLine("Riscos: Quem tem obesidade vai estar mais exposto a doenças graves e ao risco de mortalidade"); }
+            { Console.WriteLine("Riscos: Quem tem obesidade vai estar mais exposto a doenças graves e ao risco de mortalidade."); }
             if(imc>35)
-            { Console.WriteLine("Riscos: O obeso mórbito vive menos, tem alto risco de mortalidade geral por diversas causas"); }
+            { Console.WriteLine("Riscos: O obeso mórbito vive menos, tem alto risco de mortalidade geral por diversas causas."); }
 
 
             //recomendações
@@ -81,7 +82,7 @@ namespace IMC
                 "A ajuda de um profissional pode ser interessante."); }
             if (imc >= 30 && imc <36)
             { Console.WriteLine("Recomendação inicial: Adote uma dieta alimentar rigorosa, com acompanhamento" +
-                "de um nutricionista e um médico especialista(encocríno)"); }
+                "de um nutricionista e um médico especialista(encocríno)."); }
             if(imc>=36)
             { Console.WriteLine("Recomendação inicial: Procure com urgência o acompanhamento de um nutricionista para realizar reeducação alimentar, um psicólogo e um médico especialista (endocríno)."); }
         }
