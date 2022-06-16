@@ -16,7 +16,7 @@ namespace IMC
             string nome = Console.ReadLine();
                         
             //validar nome se o usuário não digitar nada
-            if (string.IsNullOrEmpty(nome)) //ver questão de número
+            while (string.IsNullOrEmpty(nome)) //ver questão de número
             {
                 AlertarErro();
                 Console.WriteLine(" Digite seu nome novamente:");
@@ -31,7 +31,7 @@ namespace IMC
             int sexo= int.Parse(Console.ReadLine());
 
             //Validação do Sexo
-            if ( sexo>2)
+            while ( sexo>2)
             { AlertarErro();
               sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
@@ -39,7 +39,7 @@ namespace IMC
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             //validação de idade
-            if (idade <=0 || idade>120 )
+            while (idade <=0 || idade>120 )
             {
                 AlertarErro() ;
                 idade = Convert.ToInt32(Console.ReadLine());
@@ -50,7 +50,7 @@ namespace IMC
             double altura = double.Parse(Console.ReadLine());
             
             //validação da altura
-             if (altura<0 || altura >3)
+             while (altura<0 || altura >3)
             {
                 AlertarErro();
                 altura = double.Parse(Console.ReadLine());
@@ -60,7 +60,8 @@ namespace IMC
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
             //validação do peso
-          if(peso<0 || peso>200)
+          
+            while(peso<0 || peso>200)
             { AlertarErro();
                 peso = double.Parse(Console.ReadLine()); ;
             }
