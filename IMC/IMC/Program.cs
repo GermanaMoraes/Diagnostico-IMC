@@ -10,20 +10,35 @@ namespace IMC
 
             Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
             Console.WriteLine("Digite seu nome");
-            //validação do nome
-
             string nome = Console.ReadLine();
-            //buscar uma melhor maneira para armazenar feminino ou Masculino
-            Console.WriteLine("Digite 1 para Feminino ou 2 para Masculino");
+            //validar nome
+            
+
+            //Sexo
+            Console.WriteLine("Digite");
+            Console.WriteLine("1- Feminino");
+            Console.WriteLine("2-Masculino");
             int sexo= int.Parse(Console.ReadLine());
+            
+            //Validação do Sexo
+
+            if (sexo >2)
+            { Console.WriteLine("Sexo Inválido! Digite novamente!");
+             Console.ReadLine();
+            }
+               
+            
 
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             //validação de idade
             
+            
+
+
             Console.WriteLine("Digite sua altura em metros");
             double altura = double.Parse(Console.ReadLine());
-            //validação da altura, ver virg ou ponto
+            //validação da altura, ver virg 
 
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
