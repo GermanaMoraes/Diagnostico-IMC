@@ -7,22 +7,23 @@ namespace IMC
         static void Main(string[] args)
         {   //Função que avisa quando há algo errado.
             static void AlertarErro()
-            { Console.WriteLine("Ops. Você informou o dado errado."); }
+            { Console.WriteLine("Ops! Você informou o dado errado. Digite Novamente"); }
             
             //Perguntando o Nome
             Console.WriteLine("Vamos calcular sua Ficha Diagnóstica do IMC!" +
                 " A seguir digite alguns dados.");
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
-            
-            //validar nome
-            if(string.IsNullOrEmpty(nome)|| Convert.ToInt32(nome)>0)//ver questão de número
+                        
+            //validar nome se o usuário não digitar nada
+            if (string.IsNullOrEmpty(nome)) //ver questão de número
             {
                 AlertarErro();
                 Console.WriteLine(" Digite seu nome novamente:");
                nome= Convert.ToString(Console.ReadLine()); ;
             }
 
+           
             //Sexo
             Console.WriteLine("Digite");
             Console.WriteLine("1- Feminino");
@@ -30,18 +31,27 @@ namespace IMC
             int sexo= int.Parse(Console.ReadLine());
 
             //Validação do Sexo
-            if (sexo == 0|| sexo>2)
-            { Console.WriteLine("Sexo Inválido! Digite novamente!");
-             sexo=Convert.ToInt32(Console.ReadLine()); ;
+            if ( sexo!=1 || sexo!= 2)
+            { AlertarErro();
+              sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
                
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             //validação de idade
-            
-            Console.WriteLine("Digite sua altura em metros");
+            if (idade <=0 || idade>120 )
+            {
+                AlertarErro() ;
+                idade = Convert.ToInt32(Console.ReadLine());
+             }
+
+            // Perguntando altura
+            Console.WriteLine("Digite sua altura em metros.");
             double altura = double.Parse(Console.ReadLine());
+            
             //validação da altura
+             
+
 
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
