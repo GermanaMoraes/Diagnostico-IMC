@@ -5,16 +5,21 @@ namespace IMC
     internal class Program
     {
         static void Main(string[] args)
-        {                    
-            //Pedir os dados do problema
-
-            Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
+        {   //Função que avisa quando há algo errado.
+            static void AlertarErro()
+            { Console.WriteLine("Ops. Você informou o dado errado."); }
+            
+            //Perguntando o Nome
+            Console.WriteLine("Vamos calcular sua Ficha Diagnóstica do IMC!" +
+                " A seguir digite alguns dados.");
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
             
             //validar nome
-            if(string.IsNullOrEmpty(nome))//ver questão de número
-            { Console.WriteLine("Erro. Digite seu nome novamente:");
+            if(string.IsNullOrEmpty(nome)|| Convert.ToInt32(nome)>0)//ver questão de número
+            {
+                AlertarErro();
+                Console.WriteLine(" Digite seu nome novamente:");
                nome= Convert.ToString(Console.ReadLine()); ;
             }
 
@@ -23,15 +28,13 @@ namespace IMC
             Console.WriteLine("1- Feminino");
             Console.WriteLine("2-Masculino");
             int sexo= int.Parse(Console.ReadLine());
-            
+
             //Validação do Sexo
-            if (sexo>2)
+            if (sexo == 0|| sexo>2)
             { Console.WriteLine("Sexo Inválido! Digite novamente!");
-             Console.ReadLine();
+             sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
                
-            
-
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             //validação de idade
