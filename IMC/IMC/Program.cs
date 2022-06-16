@@ -31,7 +31,7 @@ namespace IMC
             int sexo= int.Parse(Console.ReadLine());
 
             //Validação do Sexo
-            if ( sexo!=1 || sexo!= 2)
+            if ( sexo>2)
             { AlertarErro();
               sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
@@ -50,15 +50,24 @@ namespace IMC
             double altura = double.Parse(Console.ReadLine());
             
             //validação da altura
-             
+             if (altura<0 || altura >3)
+            {
+                AlertarErro();
+                altura = double.Parse(Console.ReadLine());
 
+            }
 
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
             //validação do peso
+          if(peso<0 || peso>200)
+            { AlertarErro();
+                peso = double.Parse(Console.ReadLine()); ;
+            }
 
-            //colocar um limpa telas
+            Console.Clear();
 
+            
             //Imprimindo o Cabeçalho
             Console.WriteLine("Diagnóstico Prévio");
             Console.WriteLine($"Nome:{nome}");
@@ -87,11 +96,11 @@ namespace IMC
             Console.WriteLine("IMC Desejável: entre 20 e 24.");
 
             //Calculando o IMC
-            double imc = (peso) / (altura * altura);
+            double imc = Convert.ToDouble(peso) / (altura * altura);
             Console.WriteLine($"Resultado do IMC: {imc}");
-
+          
             //riscos
-            if(imc<20)
+            if (imc<20)
             {
                 Console.WriteLine("Riscos: Muitas complicações de saúde como doenças pulmonares" +
                 " e cardiovasculares podem estar associadas ao baixo peso.");
