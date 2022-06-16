@@ -11,8 +11,12 @@ namespace IMC
             Console.WriteLine("Vamos calcular sua ficha diagnóstica! A seguir digite alguns dados seus para mim.");
             Console.WriteLine("Digite seu nome");
             string nome = Console.ReadLine();
-            //validar nome
             
+            //validar nome
+            if(string.IsNullOrEmpty(nome))//ver questão de número
+            { Console.WriteLine("Erro. Digite seu nome novamente:");
+               nome= Convert.ToString(Console.ReadLine()); ;
+            }
 
             //Sexo
             Console.WriteLine("Digite");
@@ -21,8 +25,7 @@ namespace IMC
             int sexo= int.Parse(Console.ReadLine());
             
             //Validação do Sexo
-
-            if (sexo >2)
+            if (sexo>2)
             { Console.WriteLine("Sexo Inválido! Digite novamente!");
              Console.ReadLine();
             }
@@ -33,16 +36,13 @@ namespace IMC
             int idade = int.Parse(Console.ReadLine());
             //validação de idade
             
-            
-
-
             Console.WriteLine("Digite sua altura em metros");
             double altura = double.Parse(Console.ReadLine());
-            //validação da altura, ver virg 
+            //validação da altura
 
             Console.WriteLine("Digite seu peso");
             double peso= double.Parse(Console.ReadLine());
-            //validação do peso, ponto ou virg
+            //validação do peso
 
             //colocar um limpa telas
 
@@ -67,7 +67,7 @@ namespace IMC
             { Console.WriteLine("Categoria: Juvenil.");  }
             if(idade >= 21 && idade <= 65 )
             { Console.WriteLine("Categoria: Adulto.");   }
-            else
+            if(idade>65)
             { Console.WriteLine("Categoria: Idoso.");    }
 
             //Resultado desejável
