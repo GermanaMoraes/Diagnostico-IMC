@@ -4,6 +4,10 @@ namespace IMC
 {
     internal class Program
     {
+        /// <summary>
+        /// Função para imprimir mensagem de erro
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {   //Função que avisa quando há algo errado.
             static void AlertarErro()
@@ -23,7 +27,7 @@ namespace IMC
             }
 
            
-            //Sexo
+            //Perguntando o Sexo
             Console.WriteLine("Digite");
             Console.WriteLine("1- Feminino");
             Console.WriteLine("2-Masculino");
@@ -35,19 +39,19 @@ namespace IMC
               sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
             
-           //Idade 
+           //Perguntando a Idade 
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
             
             //validação de idade
-            while (idade <=0 || idade>120 )
+            while (idade <0 || idade>120 )
             {
                 AlertarErro() ;
                 idade = Convert.ToInt32(Console.ReadLine());
              }
 
             // Perguntando altura
-            Console.WriteLine("Digite sua altura em metros.");
+            Console.WriteLine("Digite sua altura em metros.(Por Exemplo: 1,45)");
             double altura = double.Parse(Console.ReadLine());
             
             //validação da altura
@@ -81,8 +85,8 @@ namespace IMC
             { Console.WriteLine("Sexo: Masculino"); }
                         
             Console.WriteLine($"Idade: {idade}");
-            Console.WriteLine($"Altura:{altura}"); 
-            Console.WriteLine($"Peso: {peso}");
+            Console.WriteLine($"Altura:{altura} metros."); 
+            Console.WriteLine($"Peso: {peso} kg.");
             
             //Calculando a categoria
             if (idade < 12)
@@ -101,7 +105,7 @@ namespace IMC
             double imc = Convert.ToDouble(peso) / (altura * altura);
             Console.WriteLine($"\nResultado do IMC: {Math.Round(imc, 2)}");
           
-            //riscos
+            // Calculando os riscos de acordo com o imc
             if (imc<20)
             {
                 Console.WriteLine("Riscos: Muitas complicações de saúde como doenças pulmonares" +
@@ -117,7 +121,7 @@ namespace IMC
             { Console.WriteLine("Riscos: O obeso mórbito vive menos, tem alto risco de mortalidade geral por diversas causas."); }
 
 
-            //recomendações
+            //Imprimindo a recomendação de acordo com o imc.
 
             if (imc < 20)
             {
