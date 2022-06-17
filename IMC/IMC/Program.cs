@@ -16,11 +16,10 @@ namespace IMC
             string nome = Console.ReadLine();
                         
             //validar nome se o usuário não digitar nada
-            while (string.IsNullOrEmpty(nome)) //ver questão de número
+            while (string.IsNullOrEmpty(nome)) 
             {
                 AlertarErro();
-                Console.WriteLine(" Digite seu nome novamente:");
-               nome= Convert.ToString(Console.ReadLine()); ;
+                nome= Convert.ToString(Console.ReadLine()); ;
             }
 
            
@@ -31,13 +30,15 @@ namespace IMC
             int sexo= int.Parse(Console.ReadLine());
 
             //Validação do Sexo
-            while ( sexo>2)
+            while ( sexo<=0 || sexo>2)
             { AlertarErro();
               sexo=Convert.ToInt32(Console.ReadLine()); ;
             }
-               
+            
+           //Idade 
             Console.WriteLine("Digite sua idade");
             int idade = int.Parse(Console.ReadLine());
+            
             //validação de idade
             while (idade <=0 || idade>120 )
             {
@@ -50,7 +51,7 @@ namespace IMC
             double altura = double.Parse(Console.ReadLine());
             
             //validação da altura
-             while (altura<0 || altura >3)
+            while (altura<0 || altura >3)
             {
                 AlertarErro();
                 altura = double.Parse(Console.ReadLine());
@@ -61,7 +62,7 @@ namespace IMC
             double peso= double.Parse(Console.ReadLine());
             //validação do peso
           
-            while(peso<0 || peso>200)
+            while(peso<0 || peso>500)
             { AlertarErro();
                 peso = double.Parse(Console.ReadLine()); ;
             }
@@ -71,7 +72,7 @@ namespace IMC
             
             //Imprimindo o Cabeçalho
             Console.WriteLine("Diagnóstico Prévio");
-            Console.WriteLine($"Nome:{nome}");
+            Console.WriteLine($"\nNome:{nome}");
 
             //Imprimindo o sexo
             if(sexo==1)
@@ -79,26 +80,26 @@ namespace IMC
             if (sexo==2)
             { Console.WriteLine("Sexo: Masculino"); }
                         
-            Console.WriteLine($"Idade: {idade}");
-            Console.WriteLine($"Altura:{altura}"); 
-            Console.WriteLine($"Peso: {peso}");
+            Console.WriteLine($"\nIdade: {idade}");
+            Console.WriteLine($"\nAltura:{altura}"); 
+            Console.WriteLine($"\nPeso: {peso}");
             
             //Calculando a categoria
             if (idade < 12)
-            { Console.WriteLine("Categoria: Infantil."); }
+            { Console.WriteLine("\nCategoria: Infantil."); }
             if (idade >= 12 && idade <= 20)
-            { Console.WriteLine("Categoria: Juvenil.");  }
+            { Console.WriteLine("\nCategoria: Juvenil.");  }
             if(idade >= 21 && idade <= 65 )
-            { Console.WriteLine("Categoria: Adulto.");   }
+            { Console.WriteLine("\nCategoria: Adulto.");   }
             if(idade>65)
-            { Console.WriteLine("Categoria: Idoso.");    }
+            { Console.WriteLine("\nCategoria: Idoso.");    }
 
             //Resultado desejável
             Console.WriteLine("IMC Desejável: entre 20 e 24.");
 
             //Calculando o IMC
             double imc = Convert.ToDouble(peso) / (altura * altura);
-            Console.WriteLine($"Resultado do IMC: {imc}");
+            Console.WriteLine($"Resultado do IMC: {Math.Round(imc, 2)}");
           
             //riscos
             if (imc<20)
