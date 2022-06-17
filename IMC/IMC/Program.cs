@@ -80,26 +80,26 @@ namespace IMC
             if (sexo==2)
             { Console.WriteLine("Sexo: Masculino"); }
                         
-            Console.WriteLine($"\nIdade: {idade}");
-            Console.WriteLine($"\nAltura:{altura}"); 
-            Console.WriteLine($"\nPeso: {peso}");
+            Console.WriteLine($"Idade: {idade}");
+            Console.WriteLine($"Altura:{altura}"); 
+            Console.WriteLine($"Peso: {peso}");
             
             //Calculando a categoria
             if (idade < 12)
-            { Console.WriteLine("\nCategoria: Infantil."); }
+            { Console.WriteLine("Categoria: Infantil."); }
             if (idade >= 12 && idade <= 20)
-            { Console.WriteLine("\nCategoria: Juvenil.");  }
+            { Console.WriteLine("Categoria: Juvenil.");  }
             if(idade >= 21 && idade <= 65 )
-            { Console.WriteLine("\nCategoria: Adulto.");   }
+            { Console.WriteLine("Categoria: Adulto.");   }
             if(idade>65)
-            { Console.WriteLine("\nCategoria: Idoso.");    }
+            { Console.WriteLine("Categoria: Idoso.");    }
 
             //Resultado desejável
-            Console.WriteLine("IMC Desejável: entre 20 e 24.");
+            Console.WriteLine("\nIMC Desejável: entre 20 e 24.");
 
             //Calculando o IMC
             double imc = Convert.ToDouble(peso) / (altura * altura);
-            Console.WriteLine($"Resultado do IMC: {Math.Round(imc, 2)}");
+            Console.WriteLine($"\nResultado do IMC: {Math.Round(imc, 2)}");
           
             //riscos
             if (imc<20)
