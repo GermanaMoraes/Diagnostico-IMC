@@ -66,7 +66,7 @@ namespace IMC
             double peso= double.Parse(Console.ReadLine());
             //validação do peso
           
-            while(peso<0 || peso>500)
+            while(peso<=0 || peso>500)
             { AlertarErro();
                 peso = double.Parse(Console.ReadLine()); ;
             }
@@ -109,7 +109,7 @@ namespace IMC
             if (imc<20)
             {
                 Console.WriteLine("Riscos: Muitas complicações de saúde como doenças pulmonares" +
-                " e cardiovasculares podem estar associadas ao baixo peso.");
+                "\n e cardiovasculares podem estar associadas ao baixo peso.");
             }
             if(imc>=20 && imc<25)
             { Console.WriteLine("Riscos: Seu peso está ideal para suas referências."); }
@@ -126,16 +126,16 @@ namespace IMC
             if (imc < 20)
             {
                 Console.WriteLine("Recomendação inicial: Inclua carboidratos simples em sua dieta, além de proteínas " +
-                    "indispensáveis para ganho de massa magra. Procure um profissional.");
+                    "\n indispensáveis para ganho de massa magra. Procure um profissional.");
             }
             if (imc >= 20 && imc < 25)
             { Console.WriteLine("Recomendação inicial: Mantenha uma dieta saudável e faça seus exames periódicos."); }
             if (imc >= 25 && imc < 30)
             { Console.WriteLine("Recomendação inicial:Adote um tratamento baseado em dieta balanceada, exercício fisíco e medicação." +
-                "A ajuda de um profissional pode ser interessante."); }
+                "\n A ajuda de um profissional pode ser interessante."); }
             if (imc >= 30 && imc <36)
             { Console.WriteLine("Recomendação inicial: Adote uma dieta alimentar rigorosa, com acompanhamento" +
-                "de um nutricionista e um médico especialista(encocríno)."); }
+                "\n de um nutricionista e um médico especialista(encocríno)."); }
             if(imc>=36)
             { Console.WriteLine("Recomendação inicial: Procure com urgência o acompanhamento de um nutricionista para realizar reeducação alimentar, um psicólogo e um médico especialista (endocríno)."); }
         }
